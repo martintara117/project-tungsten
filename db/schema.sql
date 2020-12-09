@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS tungsten_db;
+CREATE DATABASE tungsten_db;
