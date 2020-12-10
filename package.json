@@ -2,9 +2,20 @@
   "name": "project-tungsten",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
+  "dependencies": {
+    "@handlebars/allow-prototype-access": "^1.0.3",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "handlebars": "^4.7.6",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.3.5"
+  },
+  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -16,11 +27,5 @@
   "bugs": {
     "url": "https://github.com/Kmcateer926/project-tungsten/issues"
   },
-  "homepage": "https://github.com/Kmcateer926/project-tungsten#readme",
-  "dependencies": {
-    "express": "^4.17.1",
-    "express-handlebars": "^5.2.0",
-    "mysql": "^2.18.1",
-    "mysql2": "^2.2.5"
-  }
+  "homepage": "https://github.com/Kmcateer926/project-tungsten#readme"
 }
