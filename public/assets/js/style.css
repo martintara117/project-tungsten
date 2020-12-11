@@ -1,0 +1,44 @@
+h1 {
+  font-family: "Saira Stencil One", cursive;
+  font-size: 6.5em;
+  font-style: bold;
+  margin: -20px 0px 0px 0px;
+}
+h2 {
+  text-align: center;
+  font-size: 2.5em;
+  font-family: "Arimo", sans-serif;
+}
+
+h3 {
+  font-family: "Didact Gothic", sans-serif;
+  font-size: 2.5em;
+  font-style: italic;
+  margin: -40px 0px 0px 0px;
+}
+
+/* body {
+  background: url(toolz.jpg);
+} */
+
+.buttonsList {
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+}
+
+.button {
+  margin: 10px;
+}
+
+.hero {
+  background: black url(toolz3.jpg) center / cover;
+}
+
+.hero2 {
+  background: black url(wrenches3.jpg) center / cover;
+}
+
+.break {
+  height: 200px;
+}
