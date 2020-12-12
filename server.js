@@ -57,6 +57,13 @@ app.get("/api/config", (req, res) => {
   });
 });
 
+app.get("/api/search/:searchTerm", (req, res) => {
+  res.json({
+    searchTerm: req.query.searchTerm,
+    results: [],
+  });
+});
+
 app.post("/api/test", (req, res) => {
   console.log(req.body);
 });
