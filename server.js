@@ -6,6 +6,7 @@ const {
 } = require("@handlebars/allow-prototype-access");
 const db = require("./models");
 const app = express();
+const fs = require("fs");
 
 const playerController = require("./controllers/playerController");
 
@@ -29,6 +30,9 @@ app.engine(
 );
 app.set("view engine", "handlebars");
 
+handlebars.registerHelper("header", function (args) {
+  return fs.readFileSync("./views/partials/header.handlebars");
+});
 // ROUTES
 
 // Views Routes
