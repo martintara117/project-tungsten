@@ -57,9 +57,10 @@ app.get("/api/config", (req, res) => {
   });
 });
 
-app.get("/api/search/:searchTerm", (req, res) => {
+app.get("/api/search/:search", (req, res) => {
+  console.log("searchTerm", req.params.search);
   res.json({
-    searchTerm: req.query.searchTerm,
+    search: req.params.search,
     results: [],
   });
 });
