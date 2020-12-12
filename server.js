@@ -33,6 +33,10 @@ app.set("view engine", "handlebars");
 handlebars.registerHelper("header", function (args) {
   return fs.readFileSync("./views/partials/header.handlebars");
 });
+
+handlebars.registerHelper("footer", function (args) {
+  return fs.readFileSync("./views/partials/footer.handlebars");
+});
 // ROUTES
 
 // Views Routes
