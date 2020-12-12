@@ -3,41 +3,45 @@ const router = express.Router();
 
 const db = require("../models");
 
-router.get("/players", (req, res) => {
-  db.Player.findAll({
-    include: db.Game,
+router.get("/profiles", (req, res) => {
+  db.Profile.findAll({
+    include: db.Tool,
   })
-    .then((allPlayers) => {
-      console.log(allPlayers);
-      res.render("players", { players: allPlayers });
+    .then((allProfiles) => {
+      console.log(allProfiles);
+      res.render("profiles", { profiles: allProfiles });
     })
     .catch((err) => {
       console.log(err);
     });
 });
 
-router.get("/player/new", (req, res) => {
-  res.render("new-player");
+router.get("/profile/new", (req, res) => {
+  res.render("new-profile");
 });
 
-router.get("/players/:id/edit", (req, res) => {
-  db.Player.findOne({
+router.get("/create-profile", (req, res) => {
+  res.render("create-profile");
+});
+
+router.get("/profiles/:id/edit", (req, res) => {
+  db.Profile.findOne({
     where: {
       id: req.params.id,
     },
-  }).then((foundPlayer) => {
-    console.log(foundPlayer.email);
-    res.render("edit-player", {
-      email: foundPlayer.email,
-      password: foundPlayer.password,
-      firstName: foundPlayer.firstName,
-      lastName: foundPlayer.lastName,
-      id: foundPlayer.id,
+  }).then((foundProfile) => {
+    console.log(foundProfile.email);
+    res.render("edit-profile", {
+      email: foundProfile.email,
+      password: foundProfile.password,
+      firstName: foundProfile.firstName,
+      lastName: foundProfile.lastName,
+      id: foundProfile.id,
     });
   });
 });
 
-router.post("/api/players", (req, res) => {
+router.post("/api/profiles", (req, res) => {
   db.Player.create(req.body)
     .then((newPlayer) => {
       res.json(newPlayer);

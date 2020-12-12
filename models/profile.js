@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-  const Player = sequelize.define("Player", {
+  const Profile = sequelize.define("Profile", {
     email: DataTypes.STRING,
     password: DataTypes.STRING,
     firstName: DataTypes.STRING,
@@ -8,12 +8,12 @@ module.exports = function (sequelize, DataTypes) {
     // TODO: Days of the week?
   });
 
-  Player.associate = function (models) {
-    Player.belongsToMany(models.Game, {
-      through: "PlayerGames",
-      foreignKey: "playerId",
+  Profile.associate = function (models) {
+    Profile.belongsToMany(models.Tool, {
+      through: "UserTools",
+      foreignKey: "profileId",
     });
   };
 
-  return Player;
-};
+  return Profile;
+}; 
