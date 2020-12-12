@@ -18,10 +18,7 @@ Confirm all this works. Then . . .
 
 6. Add body parsing middleware.
 7. Optional: Add in the express static route use for public folder
-
-## Handlebars Setup
-
-1. Require `express-handlebars`
+git 
 2. Configure express-handlebars.
 3. Create the folder structure (/views/layouts/main.handlebars)
 4. Create an index.handlebars to inject into the `{{{body}}}`
@@ -85,4 +82,4 @@ app.engine(
 - View route to serve up the form
 - jQuery implementation to send data
 - Already have the post route
-- Something needs to happen after we successfully create a new player. 
+- Something needs to happen after we successfully create a new user profile. 
