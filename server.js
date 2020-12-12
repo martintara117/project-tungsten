@@ -7,7 +7,7 @@ const {
 const db = require("./models");
 const app = express();
 
-const playerController = require("./controllers/playerController");
+const profileController = require("./controllers/profileController");
 
 const PORT = process.env.PORT || 8080;
 
@@ -36,7 +36,7 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
-app.use(playerController);
+app.use(profileController);
 
 // API Routes
 app.get("/api/config", (req, res) => {
