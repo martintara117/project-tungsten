@@ -5,7 +5,7 @@ const db = require("../models");
 
 router.get("/profiles", (req, res) => {
   db.Profile.findAll({
-    include: db.Game,
+    include: db.Tool,
   })
     .then((allProfiles) => {
       console.log(allProfiles);
@@ -18,6 +18,10 @@ router.get("/profiles", (req, res) => {
 
 router.get("/profile/new", (req, res) => {
   res.render("new-profile");
+});
+
+router.get("/create-profile", (req, res) => {
+  res.render("create-profile");
 });
 
 router.get("/profiles/:id/edit", (req, res) => {
@@ -37,7 +41,7 @@ router.get("/profiles/:id/edit", (req, res) => {
   });
 });
 
-router.post("/api/players", (req, res) => {
+router.post("/api/profiles", (req, res) => {
   db.Player.create(req.body)
     .then((newPlayer) => {
       res.json(newPlayer);

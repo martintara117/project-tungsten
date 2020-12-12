@@ -1,11 +1,11 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            {{#each players}}
+            {{#each profiles}}
             <h1>{{firstName}} {{lastName}}</h1>
             <p>Reach me at: {{email}} or {{phone}}</p>
             <button class="btn btn-danger delete-player" data-id="{{id}}">Delete</button>
-            <a href="/players/{{id}}/edit"><button class="btn btn-secondary">Edit</button></a>
+            <a href="/profiles/{{id}}/edit"><button class="btn btn-secondary">Edit</button></a>
             {{/each}}
         </div>
     </div>
