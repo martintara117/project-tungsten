@@ -15,6 +15,8 @@ $(document).ready(function () {
     console.log(firstName);
     console.log(lastName);
 
+    
+
     $.ajax({
       method: "POST",
       url: "/api/profiles",
