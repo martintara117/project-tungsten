@@ -42,31 +42,31 @@ router.get("/profiles/:id/edit", (req, res) => {
 });
 
 router.post("/api/profiles", (req, res) => {
-  db.Player.create(req.body)
-    .then((newPlayer) => {
-      res.json(newPlayer);
+  db.Profile.create(req.body)
+    .then((newProfile) => {
+      res.json(newProfile);
     })
     .catch((err) => {
       console.log(err);
     });
 });
 
-router.put("/api/players/:id", (req, res) => {
-  db.Player.update(req.body, {
+router.put("/api/profiles/:id", (req, res) => {
+  db.Profiles.update(req.body, {
     where: {
       id: req.params.id,
     },
   })
-    .then((updatedPlayer) => {
-      res.json(updatedPlayer);
+    .then((updatedProfile) => {
+      res.json(updatedProfile);
     })
     .catch((err) => {
       console.log(err);
     });
 });
 
-router.delete("/api/players/:id", (req, res) => {
-  db.Player.destroy({
+router.delete("/api/profiles/:id", (req, res) => {
+  db.Profile.destroy({
     where: {
       id: req.params.id,
     },
