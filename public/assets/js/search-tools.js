@@ -10,5 +10,14 @@ function toolSearch() {
   let searchTerm = searchInput.value;
   searchInput.value = "";
   //2.make ajax call
-  //3.direct to callback function
+  fetch("/api/search/" + searchTerm)
+    .then((res) => res.json())
+    //3.direct to callback function
+    .then(searchResults);
+}
+
+function searchResults(json) {
+  console.log(json);
+  document.querySelector("main h3").textContent =
+    "Search results for " + json.search;
 }
