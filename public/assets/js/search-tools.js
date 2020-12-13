@@ -18,8 +18,9 @@ function toolSearch() {
 
 function searchResults(json) {
   console.log(json);
-  document.querySelector("main h3").textContent =
-    "Search results for " + json.search;
+  document.querySelector(
+    "main h4"
+  ).innerHTML = `Search results for <em>${json.search}</em>.`;
   let html = "";
   if (!json.results.length) {
     html = "<li>No results found.</li>";

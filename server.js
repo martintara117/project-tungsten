@@ -8,7 +8,7 @@ const db = require("./models");
 const app = express();
 const fs = require("fs");
 
-const playerController = require("./controllers/playerController");
+const profileController = require("./controllers/profileController");
 
 const PORT = process.env.PORT || 8080;
 
@@ -47,6 +47,7 @@ app.get("/", (req, res) => {
 app.get("/search", (req, res) => {
   res.render("search-tools");
 });
+
 
 app.use(playerController);
 
