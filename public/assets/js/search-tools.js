@@ -20,4 +20,11 @@ function searchResults(json) {
   console.log(json);
   document.querySelector("main h3").textContent =
     "Search results for " + json.search;
+  let html = "";
+  if (!json.results.length) {
+    html = "<li>No results found.</li>";
+  } else {
+    //to do when search api is live
+  }
+  document.querySelector("main ol").innerHTML = html;
 }
