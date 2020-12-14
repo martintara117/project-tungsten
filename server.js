@@ -49,7 +49,7 @@ app.get("/search", (req, res) => {
 });
 
 
-app.use(playerController);
+// app.use(playerController);
 
 // API Routes
 app.get("/api/config", (req, res) => {
