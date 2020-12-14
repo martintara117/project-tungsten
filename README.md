@@ -21,7 +21,7 @@ Tungsten Tools is an app that allows users to rent tools to or from people in th
 
 ## User-Story
 
-Tungsten Tools is designed to provide users with the opportunity to exchange hand/power tools and equipment easily from other people in their area. With an easy, user friendly design, users can quickly post their own personal collection of tools to rent out to other users for profit. It also provides users in need a more cost effective way to find the tools they need for their at home projects. 
+Tungsten Tools is designed to provide users with the opportunity to exchange hand/power tools and equipment easily from other people in their area. With an easy, user friendly design, users can quickly post their own personal collection of tools to rent out to other users for profit. It also provides users in need a more cost effective way to find the tools they need for their at home projects.
 
 ## Installation
 
