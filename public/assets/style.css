@@ -164,7 +164,7 @@ body {
 }
 
 .editHero {
-  background: black url(editHero.jpg) center / cover;
+  background: black url(editHero2.jpg) center / cover;
 
   /* @media (max-width: 1024px) {
     background: url(editHero.jpg) center / cover;
@@ -177,9 +177,11 @@ body {
 .createProfileContainer {
   background: rgb(255, 255, 255);
   width: 500px;
+  margin: 10px;
 }
 
 .h1Create {
-  color: rgb(247, 215, 74);
+  text-decoration: underline gray;
+  color: white;
   font-size: 5.25em;
 }
