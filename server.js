@@ -6,6 +6,7 @@ const {
 } = require("@handlebars/allow-prototype-access");
 const db = require("./models");
 const app = express();
+const fs = require("fs");
 
 const profileController = require("./controllers/profileController");
 
@@ -29,6 +30,13 @@ app.engine(
 );
 app.set("view engine", "handlebars");
 
+handlebars.registerHelper("header", function (args) {
+  return fs.readFileSync("./views/partials/header.handlebars");
+});
+
+handlebars.registerHelper("footer", function (args) {
+  return fs.readFileSync("./views/partials/footer.handlebars");
+});
 // ROUTES
 
 // Views Routes
@@ -36,12 +44,25 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
-app.use(profileController);
+app.get("/search", (req, res) => {
+  res.render("search-tools");
+});
+
+
+app.use(playerController);
 
 // API Routes
 app.get("/api/config", (req, res) => {
   res.json({
     success: true,
+  });
+});
+
+app.get("/api/search/:search", (req, res) => {
+  console.log("searchTerm", req.params.search);
+  res.json({
+    search: req.params.search,
+    results: [],
   });
 });
 
