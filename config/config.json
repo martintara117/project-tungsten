@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "Fawkes_Chrome57",
+    "password": "password",
     "database": "tungsten_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
