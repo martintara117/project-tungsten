@@ -49,11 +49,7 @@ app.get("/search", (req, res) => {
 });
 
 
-<<<<<<< HEAD
 app.use(profileController);
-=======
-// app.use(playerController);
->>>>>>> b1123c942c0095c305b2885fced5643f545443e5
 
 // API Routes
 app.get("/api/config", (req, res) => {
