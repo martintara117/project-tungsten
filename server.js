@@ -48,6 +48,10 @@ app.get("/search", (req, res) => {
   res.render("search-tools");
 });
 
+app.get("/profiles", (req, res) => {
+  res.render("profiles");
+});
+
 app.use(profileController);
 
 // API Routes
