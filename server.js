@@ -48,8 +48,7 @@ app.get("/search", (req, res) => {
   res.render("search-tools");
 });
 
-
-// app.use(playerController);
+app.use(profileController);
 
 // API Routes
 app.get("/api/config", (req, res) => {
