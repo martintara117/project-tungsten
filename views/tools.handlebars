@@ -1,0 +1,36 @@
+{{> navbar}}
+<div class="container">
+    <div class="row">
+        <div class="col d-flex justify-content-end pt-4">
+            <a href="/tool/new">
+                <button class="btn btn-primary">New Tool</button>
+            </a>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            {{#each tools}}
+            <h1>{{name}}</h1>
+            <p>Category: {{category}}</p>
+            <button class="btn btn-danger delete-tool" data-id="{{id}}">Delete</button>
+            <a href="/tools/{{id}}/edit"><button class="btn btn-secondary">Edit</button></a>
+            {{/each}}
+        </div>
+    </div>
+</div>
+
+
+{{!-- <script>
+    $(document).ready(function () {
+        $(".delete-player").on("click", function () {
+            const id = $(this).data("id");
+            $.ajax({
+                method: "DELETE",
+                url: `/api/players/${id}`
+            }).then(response => {
+                window.location.reload();
+            })
+        })
+    })
+</script> --}}
