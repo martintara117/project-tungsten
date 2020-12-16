@@ -1,5 +1,6 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
+const session = require("express-session");
 const handlebars = require("handlebars");
 const {
   allowInsecurePrototypeAccess,
@@ -7,7 +8,8 @@ const {
 const db = require("./models");
 const app = express();
 const fs = require("fs");
-
+const passport = require("passport");
+const passportConfig = require("./config/passport");
 const profileController = require("./controllers/profileController");
 
 const PORT = process.env.PORT || 8080;
@@ -16,9 +18,13 @@ const PORT = process.env.PORT || 8080;
 // Handle POST body
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
+app.use(
+  session({ secret: "keyboard cat", resave: false, saveUninitialized: true })
+);
 // Static directory to be served
 app.use(express.static("public"));
+app.use(passport.initialize());
+app.use(passport.session());
 
 // Configure express-handlebars
 app.engine(
@@ -48,6 +54,9 @@ app.get("/search", (req, res) => {
   res.render("search-tools");
 });
 
+app.get("/profiles", (req, res) => {
+  res.render("profiles");
+});
 
 app.use(profileController);
 
@@ -56,6 +65,26 @@ app.get("/api/config", (req, res) => {
   res.json({
     success: true,
   });
+});
+
+app.post("/api/login", passportConfig.authenticate("local"), (req, res) => {
+  req.session.userId = req.session.passport.user.dataValues.id;
+  res.redirect("/");
+});
+
+app.post("/api/profiles", (req, res) => {
+  db.Profile.create({
+    email: req.body.email,
+    password: req.body.password,
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+  })
+    .then(function () {
+      res.redirect("/");
+    })
+    .catch(function (err) {
+      res.status(401).json(err);
+    });
 });
 
 app.get("/api/search/:search", (req, res) => {
