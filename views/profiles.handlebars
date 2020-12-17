@@ -1,7 +1,7 @@
 {{> header}}
 <div class="columns">
     <div class="column">
-        <div class="createProfileContainer">
+        <div class="profileHolder">
             {{#each profiles}}
             <h1>{{firstName}} {{lastName}}</h1>
             <h2>I live in {{cityName}}</h2>
@@ -9,6 +9,7 @@
             <button class="btn btn-danger delete-profile" data-id="{{id}}">Delete</button>
             <a href="/profiles/{{id}}/edit"><button class="btn btn-secondary">Edit</button></a>
             {{/each}}
+
         </div>
     </div>
 </div>
