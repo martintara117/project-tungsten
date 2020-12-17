@@ -1,29 +1,52 @@
-{{> navbar}}
-<div class="container">
-    <div class="row">
-        <div class="col d-flex justify-content-end pt-4">
-            <a href="/profile/new">
-                <button class="btn btn-primary">New Profile</button>
-            </a>
+<h1>Tungsten Tools</h1>
 
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            {{#each profiles}}
-            <h1>{{firstName}} {{lastName}}</h1>
-            <p>Reach me at: {{email}} </p>
-            <button class="btn btn-danger delete-profile" data-id="{{id}}">Delete</button>
-            <a href="/profiles/{{id}}/edit"><button class="btn btn-secondary">Edit</button></a>
-            <a href="/profiles/{{id}}"><button class="btn btn-link">Add Tools</button></a>
+<div class="columns">
+    <div class="column profilesContainer">
 
-            {{#each Tools}}
-                <p>{{name}}</p>
-            {{/each}}
-            {{/each}}
+        {{#each profiles}}
+        {{!-- <h2>{{firstName}} {{lastName}}</h2>
+
+        <p>Reach me at: {{email}} </p>
+        <p>My Tools Available to Rent:
+        <ul>
+            <li>{{tools}}</li>
+
+        </ul>
+        </p> --}}
+
+
+        <div class="card">
+
+            <div class="card-content">
+                <div class="media">
+                    <div class="media-left">
+                        <figure class="image is-100x100">
+                            <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+                        </figure>
+                    </div>
+                    <div class="media-content">
+                        <p class="title is-4">{{tools}}</p>
+                        <p class="subtitle is-6">{{firstName }} {{lastName}} in <b>{{cityName}}</b></p>
+                        <p class="subtitle is-6">{{email}}</p>
+                    </div>
+
+                </div>
+
+                <div class="content">
+
+                    <br>
+                    <button class="delete-profile" data-id="{{id}}">Delete</button>
+                    <a href="/profiles/{{id}}/edit"><button>Edit</button></a>
+                    <a href="/profiles/{{id}}"><button>Add Tools</button></a>
+                </div>
+            </div>
         </div>
+
+
+        {{/each}}
     </div>
 </div>
+
 {{!-- or {{phone}} --}}
 <script>
     $(document).ready(function () {
@@ -41,42 +64,6 @@
 
 
 
-{{!-- {{> header}}
-<div class="container">
-    <div class="row">
-        <div class="col d-flex justify-content-end pt-4">
-            <a href="/profile/create">
-                <button class="btn btn-primary">New Profile</button>
-            </a>
-
-        </div>
-    </div>
-    <div class="row">
-    {{!-- <div class="columns"> --}}
-    {{!-- <div class="column"> --}}
-        <div class="createProfileContainer">
-            
-            {{#each profiles}}
-            <h1>{{firstName}} {{lastName}}</h1>
-            <h2>I live in {{cityName}}</h2>
-            <p>Reach me at: {{email}}</p>
-            <button class="btn btn-danger delete-profile" data-id="{{id}}">Delete</button>
-            <a href="/profiles/{{id}}/edit"><button class="btn btn-secondary">Edit</button></a>
-            <a href="/profiles/{{id}}"><button class="btn btn-link">Add Tools</button></a>
-
-            {{#each Tools}}
-                <p>{{name}}</p>
-            {{/each}}
-
-            {{/each}}
-
-            
-        </div>
-    </div> 
-</div>
- {{!-- </div> --}}
- 
-{{> footer}}
 
 <script>
     $(document).ready(function () {
