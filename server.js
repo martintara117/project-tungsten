@@ -89,9 +89,11 @@ app.post("/api/profiles", (req, res) => {
 
 app.get("/api/search/:search", (req, res) => {
   console.log("searchTerm", req.params.search);
-  res.json({
-    search: req.params.search,
-    results: [],
+  db.Tool.findAll().then((tools) => {
+    res.json({
+      search: req.params.search,
+      results: tools,
+    });
   });
 });
 
