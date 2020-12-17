@@ -5,10 +5,14 @@ USE tungsten_db;
 
 CREATE TABLE tools
 (
-	id int NOT NULL AUTO_INCREMENT,
-	name varchar(255) NOT NULL,
+	id int NOT NULL
+	AUTO_INCREMENT,
+	name varchar
+	(255) NOT NULL,
     available BOOLEAN DEFAULT false,
-	PRIMARY KEY (id)
+	PRIMARY KEY
+	(id)
 );
 
-SELECT * FROM tools;
+	SELECT *
+	FROM tools;

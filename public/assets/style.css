@@ -18,6 +18,23 @@ h3 {
   color: black;
 }
 
+.headerNav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: underline;
+  font-size: 20px;
+  float: left;
+}
+
 /* body {
     background: url(toolz.jpg);
   } */
@@ -110,18 +127,38 @@ body {
 
 .search {
   box-sizing: content-box;
-  display: flex;
-  flex-direction: row;
   padding: 40px 100px;
-  float: right;
-  margin-right: 100px;
-  width: 240px;
   border-style: solid;
   border-width: 2px;
   border-color: black;
+  position: absolute;
+  top: 15px;
+  right: 100px;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
 }
-.searchTools {
-  float: left;
+@media screen and (max-width: 1350px) {
+  .search {
+    position: static;
+    margin-top: 25px;
+  }
+}
+
+.resultsContainer {
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgb(156, 156, 156);
+  margin: 100px;
+  padding: 75px;
+}
+.searchResults {
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgb(0, 0, 0);
+  margin: 10px;
+  padding: 15px;
+  list-style-type: none;
 }
 
 .btn {
