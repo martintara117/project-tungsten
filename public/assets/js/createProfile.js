@@ -1,19 +1,22 @@
 $(document).ready(function () {
   console.log("My new profile form will go here.");
-  console.log(
-    "I can write all my actual code in a javascript file. Not inside a handlebars file. "
-  );
 
-  $("#create-profile").on("submit", function (e) {
+
+
+  $("#createForm").on("submit", function (e) {
     e.preventDefault();
     const email = $("#email").val();
-    const password = $("#password").val();
-    const firstName = $("#firstName").val();
-    const lastName = $("#lastName").val();
+    // const password = $("#password").val();
+    const firstName = $("#first-name").val();
+    const lastName = $("#last-name").val();
+    const cityName = $("#cityName").val();
+    const tools = $("#tools").val();
+
     console.log(email);
-    console.log(password);
+    console.log(cityName);
     console.log(firstName);
     console.log(lastName);
+    console.log(tools);
 
     
 
@@ -22,9 +25,10 @@ $(document).ready(function () {
       url: "/api/profiles",
       data: {
         email,
-        password,
+        cityName,
         firstName,
         lastName,
+        tools
       },
     }).then((response) => {
       window.location.replace("/profiles");

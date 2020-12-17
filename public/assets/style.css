@@ -178,3 +178,27 @@ body {
   -webkit-transform: rotate(40deg);
   transform: rotate(40deg);
 }
+
+.editHero {
+  background: black url(editHero2.jpg) center / cover;
+
+  /* @media (max-width: 1024px) {
+    background: url(editHero.jpg) center / cover;
+  }
+  @media (max-width: 768px) {
+    background: url(editHero.jpg) center / cover;
+  } */
+}
+
+.createProfileContainer {
+  background: rgb(255, 255, 255);
+  width: 500px;
+  margin: 10px;
+  border-radius: 3px;
+}
+
+.h1Create {
+  text-decoration: underline gray;
+  color: white;
+  font-size: 5.25em;
+}
