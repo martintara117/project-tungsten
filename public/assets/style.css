@@ -221,10 +221,7 @@ body {
   font-size: 5.25em;
 }
 
-.profileHolder {
-  background: rgb(255, 255, 255);
-  width: 500px;
-  height: 800px;
+.profilesContainer {
   margin: 10px;
-  border-radius: 3px;
+  
 }
