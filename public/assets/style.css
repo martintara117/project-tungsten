@@ -117,11 +117,19 @@ body {
   float: left;
 }
 
-.results {
+.resultsContainer {
   border-style: solid;
   border-width: 2px;
-  border-color: black;
+  border-color: rgb(156, 156, 156);
   margin: 100px;
+  padding: 75px;
+}
+.searchResults {
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgb(0, 0, 0);
+  margin: 10px;
+  padding: 200px;
 }
 
 .btn {

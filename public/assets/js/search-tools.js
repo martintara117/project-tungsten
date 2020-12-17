@@ -23,7 +23,7 @@ function searchResults(json) {
   ).innerHTML = `Search results for <em>${json.search}</em>.`;
   let html = "";
   if (!json.results.length) {
-    html = "<li>No results found.</li>";
+    html = "<ol>No results found.</ol>";
   } else {
     //to do when search api is live
   }
