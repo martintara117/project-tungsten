@@ -1,69 +1,32 @@
-<div class="img">
-    <section class="hero is-fullheight editHero">
-        <h1 class="h1Create">TUNGSTEN TOOLS</h1>
-        <form id="createForm">
-            <div class="createProfileContainer">
-
-                <div class="field">
-                    <label class="label">First Name</label>
-                    <div class="control">
-                        <input id="first-name" class="input" type="text" placeholder="First Name">
-                    </div>
+{{> header}}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <form id="create-profile">
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email">
                 </div>
-                <div class="field">
-                    <label class="label">Last Name</label>
-                    <div class="control">
-                        <input id="last-name" class="input" type="text" placeholder="Last Name">
-                    </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password">
                 </div>
-
-
-
-                <div class="field">
-                    <label class="label">Email</label>
-                    <div class="control has-icons-left has-icons-right">
-                        <input id="email" class="input" type="email" placeholder="Email input">
-                        <span class="icon is-small is-left">
-                            <i class="fas fa-envelope"></i>
-                        </span>
-                        <span class="icon is-small is-right">
-                            <i class="fas fa-exclamation-triangle"></i>
-                        </span>
-                    </div>
-                    {{!-- <p class="help is-danger">This email is invalid</p> --}}
+                <div class="mb-3">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="firstName">
                 </div>
-
-                <div class="field">
-                    <label class="label">What city do you live in?</label>
-                    <div class="control">
-                        <input id="cityName" class="input" type="text" placeholder="City Name">
-                    </div>
+                <div class="mb-3">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="lastName">
                 </div>
 
 
-                <div class="field">
-                    <label class="label">What tools do you own that you would want to rent out?</label>
-                    <div class="control">
-                        <textarea id="tools" class="textarea" placeholder="Enter Tools"></textarea>
-                    </div>
-                </div>
-
-
-
-
-
-                <div class="field is-grouped">
-                    <div class="control">
-                        <button id="createSubmit" class="button is-link">Submit</button>
-                    </div>
-                    <div class="control">
-                        <button id="createCancel" class="button is-link is-light">Cancel</button>
-                    </div>
-                </div>
-            </div>
-        </form>
-    </section>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
 </div>
-
+{{> footer}}
 
 <script type="text/javascript" src="/assets/js/createProfile.js"></script>

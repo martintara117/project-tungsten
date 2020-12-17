@@ -38,7 +38,7 @@ MIT: A short and simple permissive license with conditions only requiring preser
 
 ## Contribution
 
-Credit goes to Jenna LaFrancois, Drew Amerson, Kevin McAteer and Tara Martin
+Credit goes to Jenna LaFrancois, Drew Amerson, Kevin McAteer and Tara Martin.
 
 ## Test
 
