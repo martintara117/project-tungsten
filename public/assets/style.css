@@ -17,7 +17,7 @@ h3 {
   margin: -20px 0px 0px 0px;
   color: black;
 }
- 
+
 /* body {
     background: url(toolz.jpg);
   } */
@@ -219,4 +219,12 @@ body {
   text-decoration: underline gray;
   color: white;
   font-size: 5.25em;
+}
+
+.profileHolder {
+  background: rgb(255, 255, 255);
+  width: 500px;
+  height: 800px;
+  margin: 10px;
+  border-radius: 3px;
 }

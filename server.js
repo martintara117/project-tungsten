@@ -75,9 +75,10 @@ app.post("/api/login", passportConfig.authenticate("local"), (req, res) => {
 app.post("/api/profiles", (req, res) => {
   db.Profile.create({
     email: req.body.email,
-    password: req.body.password,
+    cityName: req.body.cityName,
     firstName: req.body.firstName,
     lastName: req.body.lastName,
+    tools: req.body.tools,
   })
     .then(function () {
       res.redirect("/");
