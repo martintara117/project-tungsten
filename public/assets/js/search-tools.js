@@ -25,7 +25,9 @@ function searchResults(json) {
   if (!json.results.length) {
     html = "<ol>No results found.</ol>";
   } else {
-    //to do when search api is live
+    for (let tool of json.results) {
+      html += `<li>${tool.main}</li>`;
+    }
   }
   document.querySelector("main ol").innerHTML = html;
 }
