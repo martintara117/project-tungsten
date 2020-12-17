@@ -3,7 +3,7 @@ const router = express.Router();
 
 const db = require("../models");
 
-router.post("/playergames", (req, res) => {
+router.post("/usertools", (req, res) => {
   db.userTools.create({
     playerId: req.body.profileId,
     toolId: req.body.toolId,
