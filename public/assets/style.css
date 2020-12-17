@@ -117,7 +117,12 @@ body {
   float: left;
 }
 
-
+.results {
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  margin: 100px;
+}
 
 .btn {
   letter-spacing: 0.1em;
