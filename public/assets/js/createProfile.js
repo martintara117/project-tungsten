@@ -9,7 +9,7 @@ $(document).ready(function () {
     // const password = $("#password").val();
     const firstName = $("#first-name").val();
     const lastName = $("#last-name").val();
-    const cityName = $("#cityName").val();
+    const cityName = $("#cityName").val().trim();
     const tools = $("#tools").val();
 
     console.log(email);

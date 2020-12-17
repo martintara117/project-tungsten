@@ -1,10 +1,11 @@
 {{> header}}
-<div class="container">
-    <div class="row">
-        <div class="col">
+<div class="columns">
+    <div class="column">
+        <div class="createProfileContainer">
             {{#each profiles}}
             <h1>{{firstName}} {{lastName}}</h1>
-            <p>Reach me at: {{email}} or {{phone}}</p>
+            <h2>I live in {{cityName}}</h2>
+            <p>Reach me at: {{email}}</p>
             <button class="btn btn-danger delete-profile" data-id="{{id}}">Delete</button>
             <a href="/profiles/{{id}}/edit"><button class="btn btn-secondary">Edit</button></a>
             {{/each}}
