@@ -26,7 +26,7 @@ function searchResults(json) {
     html = "<ol>No results found.</ol>";
   } else {
     for (let tool of json.results) {
-      html += `<li>${tool.main}</li>`;
+      html += `<li>${tool.name}</li>`;
     }
   }
   document.querySelector("main ol").innerHTML = html;
