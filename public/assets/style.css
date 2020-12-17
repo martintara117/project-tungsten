@@ -102,15 +102,22 @@ body {
   flex-direction: row;
   padding: 40px 100px;
   float: right;
-  margin-right: 100px;
+  margin-right: 115px;
   width: 240px;
   border-style: solid;
   border-width: 2px;
   border-color: black;
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 18px;
+  line-height: 10px;
 }
 .searchTools {
   float: left;
 }
+
+
 
 .btn {
   letter-spacing: 0.1em;
