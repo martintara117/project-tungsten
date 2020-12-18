@@ -11,6 +11,9 @@ const fs = require("fs");
 const passport = require("passport");
 const passportConfig = require("./config/passport");
 const profileController = require("./controllers/profileController");
+const userToolsController = require("./controllers/userToolsController");
+const cloudinaryController = require("./controllers/cloudinaryController");
+const toolController = require("./controllers/toolController");
 
 const PORT = process.env.PORT || 8080;
 
@@ -59,7 +62,9 @@ app.get("/search", (req, res) => {
 // });
 
 app.use(profileController);
-
+app.use(userToolsController);
+app.use(cloudinaryController);
+app.use(toolController);
 // API Routes
 app.get("/api/config", (req, res) => {
   res.json({
