@@ -18,12 +18,8 @@ $(document).ready(function () {
         cityName,
         tools,
       },
-
-      
     }).then((response) => {
       window.location.replace("/profiles");
-
-
     });
   });
 });

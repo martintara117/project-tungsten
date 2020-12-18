@@ -89,6 +89,11 @@ app.post("/api/profiles", (req, res) => {
     lastName: req.body.lastName,
     tools: req.body.tools,
   })
+    .then(async function () {
+      await db.Tool.create({
+        name: req.body.tools,
+      });
+    })
     .then(function () {
       res.redirect("/");
     })
@@ -116,9 +121,7 @@ app.get("/api/search/:search", (req, res) => {
   });
 });
 
-app.post("/api/test", (req, res) => {
-  console.log(req.body);
-});
+app.post("/api/test", (req, res) => {});
 // db.sequelize.sync({ force: true }).then(() => {
 db.sequelize.sync().then(() => {
   app.listen(PORT, () => {

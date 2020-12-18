@@ -17,7 +17,6 @@ function toolSearch() {
 }
 
 function searchResults(json) {
-  console.log(json);
   document.querySelector(
     "main h4"
   ).innerHTML = `Search results for <em>${json.search}</em>.`;
