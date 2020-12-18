@@ -4,7 +4,7 @@ $(document).ready(function () {
   
     $("#new-tool").on("submit", function (e) {
       e.preventDefault();
-      console.log("You submitted the new game form.");
+      console.log("You submitted the new tool form.");
       const name = $("#name").val();
       const category = $("#category").val();
     //   const maxNumPlayers = $("#maxNumPlayers").val();

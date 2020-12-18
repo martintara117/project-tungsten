@@ -24,6 +24,34 @@ router.get("/create-profile", (req, res) => {
   res.render("create-profile");
 });
 
+
+router.get("/profiles/:id", (req, res) => {
+  console.log("Single profile");
+  db.Profile.findOne({
+    where: {
+      id: req.params.id,
+    },
+  })
+    .then(async (foundProfile) => {
+      console.log(foundProfile);
+
+      const allTools = await db.Tool.findAll({});
+      console.log(allTools);
+      res.render("single-profile", {
+        profileId: foundProfile.id,
+        firstName: foundProfile.firstName,
+        lastName: foundProfile.lastName,
+        email: foundProfile.email,
+        phone: foundProfile.phone,
+        availableTools: allTools,
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
+
 router.get("/profiles/:id/edit", (req, res) => {
   db.Profile.findOne({
     where: {

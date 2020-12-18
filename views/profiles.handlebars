@@ -30,15 +30,20 @@
                     <a href="/profiles/{{id}}/edit"><button>Edit</button></a>
                     <a href="/profiles/{{id}}"><button>Add Tools</button></a>
 
+                    
+{{#each Tools}}
+                <p>{{name}}</p>
+            {{/each}}
+{{/each}}
+                
                 </div>
             </div>
+            
+
+        
         </div>
-
-
-        {{/each}}
     </div>
 </div>
-
 {{!-- or {{phone}} --}}
 <script>
     $(document).ready(function () {
@@ -74,16 +79,21 @@
 </script>
 
 
-<script>
-    $(document).ready(function () {
-        $(".delete-profile").on("click", function () {
-            const id = $(this).data("id");
-            $.ajax({
-                method: "DELETE",
-                url: `/api/profiles/${id}`
-            }).then(response => {
-                window.location.reload();
-            })
-        })
-    })
-</script> --}}
+{{!-- <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+     <script type="text/javascript">  
+  var widget = cloudinary.applyUploadWidget({ 
+    cloudName: 'dnmpdqhrd', 
+    uploadPreset: 'ml_default' }, 
+    (error, result) => { 
+       if (!error && result && result.event === "success") { 
+            console.log('Done uploading..: ', result.info); 
+          }
+
+     });    
+
+   document.getElementById("upload_widget").addEventListener("click", function(){
+    myWidget.open();
+  }, false);
+     </script> --}}
+
+

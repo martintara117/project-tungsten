@@ -5,7 +5,7 @@ const db = require("../models");
 
 router.post("/usertools", (req, res) => {
   db.userTools.create({
-    playerId: req.body.profileId,
+    profileId: req.body.profileId,
     toolId: req.body.toolId,
   })
     .then((response) => {
