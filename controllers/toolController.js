@@ -14,9 +14,9 @@ router.get("/tools", (req, res) => {
     });
 });
 
-// router.get("/tools/new", (req, res) => {
-//   res.render("new-tools");
-// });
+router.get("/tool/new", (req, res) => {
+  res.render("new-tool");
+});
 
 router.get("/tools/:id/edit", (req, res) => {
   db.Tool.findOne({
