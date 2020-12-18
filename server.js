@@ -11,9 +11,13 @@ const fs = require("fs");
 const passport = require("passport");
 const passportConfig = require("./config/passport");
 const profileController = require("./controllers/profileController");
+
 const userToolsController = require("./controllers/userToolsController");
 const cloudinaryController = require("./controllers/cloudinaryController");
 const toolController = require("./controllers/toolController");
+
+// const sequelize = require("sequelize");
+// const op = sequelize.op;
 
 const PORT = process.env.PORT || 8080;
 
@@ -95,9 +99,20 @@ app.post("/api/profiles", (req, res) => {
 
 app.get("/api/search/:search", (req, res) => {
   console.log("searchTerm", req.params.search);
-  res.json({
-    search: req.params.search,
-    results: [],
+  db.Tool.findAll({
+    // where: {
+    //   name: {
+    //     [op.like]: req.params.search,
+    //   },
+    // },
+  }).then((tools) => {
+    let filteredTools = tools.filter(
+      (tool) => tool.name.toLowerCase() === req.params.search.toLowerCase()
+    );
+    res.json({
+      search: req.params.search,
+      results: filteredTools,
+    });
   });
 });
 

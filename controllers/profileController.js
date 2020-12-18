@@ -36,6 +36,7 @@ router.get("/profiles/:id/edit", (req, res) => {
       password: foundProfile.password,
       firstName: foundProfile.firstName,
       lastName: foundProfile.lastName,
+      cityName: foundProfile.cityName,
       id: foundProfile.id,
     });
   });
