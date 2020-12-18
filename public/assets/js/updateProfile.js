@@ -13,9 +13,9 @@ $(document).ready(function () {
       url: "/api/profiles/${id}",
       data: {
         email,
-        cityName,
         firstName,
         lastName,
+        cityName,
         tools,
       },
 
