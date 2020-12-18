@@ -7,6 +7,7 @@ module.exports = function (sequelize, DataTypes) {
     firstName: DataTypes.STRING,
     lastName: DataTypes.STRING,
     tools: DataTypes.STRING,
+    
     // TODO: Days of the week?
   });
 
