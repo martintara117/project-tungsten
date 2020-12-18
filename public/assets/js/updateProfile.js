@@ -7,18 +7,23 @@ $(document).ready(function () {
     const firstName = $("#firstName").val();
     const lastName = $("#lastName").val();
     const cityName = $("#cityName").val().trim();
+    const tools = $("#tools").val();
     $.ajax({
       method: "PUT",
-      url: `/api/profiles/${id}`,
+      url: "/api/profiles/${id}",
       data: {
         email,
         cityName,
         firstName,
         lastName,
-        tools
+        tools,
       },
+
+      
     }).then((response) => {
       window.location.replace("/profiles");
+
+
     });
   });
 });
