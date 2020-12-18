@@ -7,15 +7,22 @@
     "@handlebars/allow-prototype-access": "^1.0.3",
     "bcryptjs": "^2.4.3",
     "bulma": "^0.9.1",
+    "cloudinary": "^1.23.0",
+    "data": "^0.6.1",
+    "datauri": "^3.0.0",
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
     "express-session": "^1.17.1",
+    "form-data": "^3.0.0",
     "handlebars": "^4.7.6",
+    "module_name": "^1.0.0",
+    "multer": "^1.4.2",
     "mysql": "^2.18.1",
     "mysql2": "^2.2.5",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
-    "sequelize": "^6.3.5"
+    "sequelize": "^6.3.5",
+    "uri": "^0.1.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.6"

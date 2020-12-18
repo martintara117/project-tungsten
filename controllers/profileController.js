@@ -53,7 +53,7 @@ router.post("/api/profiles", (req, res) => {
 });
 
 router.put("/api/profiles/:id", (req, res) => {
-  db.Profiles.update(req.body, {
+  db.Profile.update(req.body, {
     where: {
       id: req.params.id,
     },
