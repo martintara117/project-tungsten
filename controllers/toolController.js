@@ -6,7 +6,6 @@ const db = require("../models");
 router.get("/tools", (req, res) => {
   db.Tool.findAll({})
     .then((allGames) => {
-      console.log(allGames);
       res.render("tools", { games: allGames });
     })
     .catch((err) => {
@@ -24,7 +23,6 @@ router.get("/tools/:id/edit", (req, res) => {
       id: req.params.id,
     },
   }).then((foundTool) => {
-    console.log(foundTool);
     res.render("edit-tool");
   });
 });
@@ -60,7 +58,6 @@ router.delete("/api/tools/:id", (req, res) => {
     },
   })
     .then((response) => {
-      console.log(response);
       res.json(response);
     })
     .catch((err) => {

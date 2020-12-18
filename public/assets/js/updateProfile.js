@@ -18,12 +18,8 @@ $(document).ready(function () {
         lastName,
         tools,
       },
-
-      
     }).then((response) => {
       window.location.replace("/profiles");
-
-
     });
   });
 });

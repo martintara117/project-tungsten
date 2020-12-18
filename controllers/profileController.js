@@ -30,7 +30,6 @@ router.get("/profiles/:id/edit", (req, res) => {
       id: req.params.id,
     },
   }).then((foundProfile) => {
-    console.log(foundProfile.email);
     res.render("edit-profile", {
       email: foundProfile.email,
       password: foundProfile.password,
@@ -55,7 +54,7 @@ router.post("/api/profiles", (req, res) => {
 router.put("/api/profiles/:id", (req, res) => {
   db.Profile.update(req.body, {
     where: {
-      id: req.params.id,
+      id: Number(req.params.id),
     },
   })
     .then((updatedProfile) => {
@@ -73,7 +72,6 @@ router.delete("/api/profiles/:id", (req, res) => {
     },
   })
     .then((response) => {
-      console.log(response);
       res.json(response);
     })
     .catch((err) => {
