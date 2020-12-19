@@ -32,6 +32,8 @@ Tungsten Tools is designed to provide users with the opportunity to exchange han
 
 ## Usage
 
+Please follow the link to see a video demonstrating how the app preforms:
+
 ## License
 
 MIT: A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
