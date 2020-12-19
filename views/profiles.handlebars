@@ -16,8 +16,11 @@
                         </figure>
                     </div>
                     <div class="media-content">
+                        //tools section 
                         <p class="title is-4">{{tools}}</p>
+                        //user info section
                         <p class="subtitle is-6">{{firstName }} {{lastName}} in <b>{{cityName}}</b></p>
+                        //users email
                         <p class="subtitle is-6">{{email}}</p>
                     </div>
 
@@ -26,8 +29,11 @@
                 <div class="content">
 
                     <br>
+                    //delete button
                     <button class="delete-profile" data-id="{{id}}">Delete</button>
+                    //edit button
                     <a href="/profiles/{{id}}/edit"><button>Edit</button></a>
+                    //tools to be added button
                     <a href="/new-tool/{{id}}"><button>Add Tools</button></a>
 
  {{#each tools}}
@@ -45,6 +51,7 @@
 </div>
 {{!-- or {{phone}} --}}
 <script>
+    //code to delete profile
     $(document).ready(function () {
         $(".delete-profile").on("click", function () {
             const id = $(this).data("id");
