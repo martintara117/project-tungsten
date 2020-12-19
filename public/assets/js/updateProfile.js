@@ -8,9 +8,11 @@ $(document).ready(function () {
     const lastName = $("#lastName").val();
     const cityName = $("#cityName").val().trim();
     const tools = $("#tools").val();
+    console.log(cityName);
+    console.log(id)
     $.ajax({
       method: "PUT",
-      url: "/api/profiles/${id}",
+      url: `/api/profiles/${id}`,
       data: {
         email,
         firstName,

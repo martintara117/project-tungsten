@@ -3,15 +3,15 @@
 <div class="columns">
     <div class="column profilesContainer">
 
+               {{ log profiles }}     
         {{#each profiles}}
         <div class="card">
-
             <div class="card-content">
                 <div class="media">
                     <div class="media-left">
                         <figure class="image is-100x100">
                             <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
-                            <button id="upload_widget">Upload images</button>
+                            {{!-- <button id="upload_widget">Upload images</button> --}}
                             {{!-- <button id="upload_widget" class="cloudinary-button">Upload images</button> --}}
                         </figure>
                     </div>
@@ -28,13 +28,11 @@
                     <br>
                     <button class="delete-profile" data-id="{{id}}">Delete</button>
                     <a href="/profiles/{{id}}/edit"><button>Edit</button></a>
-                    <a href="/profiles/{{id}}"><button>Add Tools</button></a>
+                    <a href="/new-tool/{{id}}"><button>Add Tools</button></a>
 
-                    
-{{#each Tools}}
+ {{#each tools}}
                 <p>{{name}}</p>
-            {{/each}}
-{{/each}}
+            {{/each}} 
                 
                 </div>
             </div>
@@ -42,6 +40,7 @@
 
         
         </div>
+{{/each}}
     </div>
 </div>
 {{!-- or {{phone}} --}}
@@ -58,42 +57,4 @@
         })
     })
 </script>
-
-
-<script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
-<script type="text/javascript">
-    var widget = cloudinary.applyUploadWidget({
-        cloudName: 'dnmpdqhrd',
-        uploadPreset: 'ml_default'
-    },
-        (error, result) => {
-            if (!error && result && result.event === "success") {
-                console.log('Done uploading..: ', result.info);
-            }
-
-        });
-
-    document.getElementById("upload_widget").addEventListener("click", function () {
-        myWidget.open();
-    }, false);
-</script>
-
-
-{{!-- <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
-     <script type="text/javascript">  
-  var widget = cloudinary.applyUploadWidget({ 
-    cloudName: 'dnmpdqhrd', 
-    uploadPreset: 'ml_default' }, 
-    (error, result) => { 
-       if (!error && result && result.event === "success") { 
-            console.log('Done uploading..: ', result.info); 
-          }
-
-     });    
-
-   document.getElementById("upload_widget").addEventListener("click", function(){
-    myWidget.open();
-  }, false);
-     </script> --}}
-
 
