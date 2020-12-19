@@ -82,6 +82,7 @@ app.post("/api/login", passportConfig.authenticate("local"), (req, res) => {
   res.redirect("/");
 });
 
+//post route to create user profile and tool listed for rent
 app.post("/api/profiles", (req, res) => {
   db.Profile.create({
     email: req.body.email,
