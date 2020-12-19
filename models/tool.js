@@ -1,6 +1,7 @@
 module.exports = function (sequelize, DataTypes) {
   const Tool = sequelize.define(
     "Tool",
+    //info pulled from db
     {
       name: DataTypes.STRING,
       // category: DataTypes.STRING,
