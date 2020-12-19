@@ -16,11 +16,11 @@
                         </figure>
                     </div>
                     <div class="media-content">
-                        //tools section 
+                        {{!-- //tools section  --}}
                         <p class="title is-4">{{tools}}</p>
-                        //user info section
+                        {{!-- //user info section --}}
                         <p class="subtitle is-6">{{firstName }} {{lastName}} in <b>{{cityName}}</b></p>
-                        //users email
+                        {{!-- //users email --}}
                         <p class="subtitle is-6">{{email}}</p>
                     </div>
 
@@ -29,11 +29,11 @@
                 <div class="content">
 
                     <br>
-                    //delete button
+                    {{!-- //delete button --}}
                     <button class="delete-profile" data-id="{{id}}">Delete</button>
-                    //edit button
+                    {{!-- //edit button --}}
                     <a href="/profiles/{{id}}/edit"><button>Edit</button></a>
-                    //tools to be added button
+                    {{!-- //tools to be added button --}}
                     <a href="/new-tool/{{id}}"><button>Add Tools</button></a>
 
  {{#each tools}}
