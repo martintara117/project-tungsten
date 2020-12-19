@@ -48,4 +48,10 @@ To test the app, please visit: https://floating-crag-67869.herokuapp.com/
 
 ## Contact
 
-Please contact me for questions, comments and concerns:
+For questions, comments and concerns:
+
+Tara Martin: martin.tara117@gmail.com https://github.com/martintara117
+Kevin McAteer: kmcateer926@gmail.com https://github.com/Kmcateer926
+Andrew Amerson: aamerson198@gmail.com https://github.com/aamerson198
+Jenna La Francois: jenna.lafrancois@gmail.com https://github.com/jennalala
+
