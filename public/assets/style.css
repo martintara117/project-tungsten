@@ -146,11 +146,10 @@ body {
 }
 
 .resultsContainer {
-  border-style: solid;
-  border-width: 2px;
-  border-color: rgb(156, 156, 156);
-  margin: 100px;
+  margin: 0px;
   padding: 75px;
+  position: relative;
+  top: -690px;
 }
 .searchResults {
   border-style: solid;
@@ -260,5 +259,22 @@ body {
 
 .profilesContainer {
   margin: 10px;
-  
+}
+
+.card {
+  background: rgb(238, 245, 250);
+}
+
+.editHero2 {
+  background: black url(toolsRight.jpg) center / cover;
+}
+
+@media (max-width: 1024px) {
+  .hero2 {
+    max-width: 100%;
+    height: auto;
+  }
+}
+.editDiv {
+  color: black;
 }
