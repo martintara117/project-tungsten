@@ -42,7 +42,7 @@ Credit goes to Jenna LaFrancois, Drew Amerson, Kevin McAteer and Tara Martin.
 
 ## Test
 
-To test the app, please visit
+To test the app, please visit: https://floating-crag-67869.herokuapp.com/
 
 ## Contact
 
