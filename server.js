@@ -122,6 +122,7 @@ app.get("/api/search/:search", (req, res) => {
   });
 });
 
+// uses sequelize and post route to the db
 app.post("/api/test", (req, res) => {});
 // db.sequelize.sync({ force: true }).then(() => {
 db.sequelize.sync().then(() => {
