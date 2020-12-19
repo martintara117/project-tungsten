@@ -10,7 +10,7 @@ module.exports = function (sequelize, DataTypes) {
     },
     { timestamps: false }
   );
-
+//user tools pulled from db
   Tool.associate = function (models) {
     Tool.belongsToMany(models.Profile, {
       through: "UserTools",
