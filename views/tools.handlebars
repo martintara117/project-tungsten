@@ -21,16 +21,16 @@
 </div>
 
 
-{{!-- <script>
+<script>
     $(document).ready(function () {
-        $(".delete-player").on("click", function () {
+        $(".delete-tool").on("click", function () {
             const id = $(this).data("id");
             $.ajax({
                 method: "DELETE",
-                url: `/api/players/${id}`
+                url: `/api/tools/${id}`
             }).then(response => {
                 window.location.reload();
             })
         })
     })
-</script> --}}
+</script>

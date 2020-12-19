@@ -65,7 +65,7 @@ router.get("/profiles/:id/edit", (req, res) => {
       lastName: foundProfile.lastName,
       cityName: foundProfile.cityName,
       id: foundProfile.id,
-    });
+    })
   });
 });
 
@@ -80,12 +80,15 @@ router.post("/api/profiles", (req, res) => {
 });
 
 router.put("/api/profiles/:id", (req, res) => {
+  console.log("line 86");
   db.Profile.update(req.body, {
+    
     where: {
       id: Number(req.params.id),
     },
   })
     .then((updatedProfile) => {
+      console.log("profile updated!");
       res.json(updatedProfile);
     })
     .catch((err) => {

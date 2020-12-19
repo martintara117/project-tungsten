@@ -5,8 +5,8 @@ const db = require("../models");
 
 router.get("/tools", (req, res) => {
   db.Tool.findAll({})
-    .then((allGames) => {
-      res.render("tools", { games: allGames });
+    .then((allTools) => {
+      res.render("tools", { tools: allTools });
     })
     .catch((err) => {
       console.log(err);
@@ -16,7 +16,9 @@ router.get("/tools", (req, res) => {
 router.get("/tool/new", (req, res) => {
   res.render("new-tool");
 });
-
+router.get("/new-tool/:id", (req, res) => {
+  res.render("new-tool");
+});
 router.get("/tools/:id/edit", (req, res) => {
   db.Tool.findOne({
     where: {

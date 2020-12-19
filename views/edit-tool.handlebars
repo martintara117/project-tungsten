@@ -1,0 +1,25 @@
+{{> header}}
+<div class="columns">
+    <div class="column">
+        <div class="col-sm-6">
+            <form id="edit-profile" data-id="{{id}}">
+
+
+                <div class="mb-3">
+                    <label for="firstName" class="form-label">Tool:</label>
+                    <input type="text" class="form-control" id="firstName" value="{{name}}">
+                </div>
+                {{!-- <div class="mb-3">
+                    <label for="lastName" class="form-label">category:</label>
+                    <input type="text" class="form-control" id="lastName" value="{{category}}">
+                </div>
+                <div class="mb-3"> --}}
+            
+                </div>
+                <button type="submit" class="btn btn-primary">Update</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/assets/js/editTool.js"></script>
