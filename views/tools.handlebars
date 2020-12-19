@@ -1,26 +1,33 @@
 {{> header}}
-<div class="container">
-    <div class="row">
-        <div class="col d-flex justify-content-end pt-4">
+<section class="hero-is-full-height hero5">
+    <div class="columns">
+        <div class="column">
             <a href="/tool/new">
-                <button class="btn btn-primary" class="btn effect01">New Tool</button>
+                <div class="buttons">
+                    <div class="container">
+                        <a href="/create-profile" class="btn effect01" target="_blank"><span>New Tool</span></a>
+                    </div>
+                </div>
             </a>
-
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            {{#each tools}}
-            <h1>{{name}}</h1>
-            <p>Category: {{category}}</p>
-            <button class="btn btn-danger delete-tool" data-id="{{id}}">Delete</button>
-            <a href="/tools/{{id}}/edit"><button class="btn btn-secondary">Edit</button></a>
-            {{/each}}
-        </div>
-    </div>
-</div>
+            {{!-- <a href="/tool/new">
+                <button class="btn btn-primary" class="btn effect01">New Tool</button>
+            </a> --}}
 
 
+
+            <div class="column">
+                <div class="column">
+                    {{#each tools}}
+                    <h2>{{name}}</h2>
+                    <h3>Category: {{category}}</h3>
+                    <button class="btn btn-danger delete-tool" data-id="{{id}}">Delete</button>
+                    <a href="/tools/{{id}}/edit"><button class="btn btn-secondary">Edit</button></a>
+                    {{/each}}
+
+                </div>
+            </div>
+
+</section>
 <script>
     $(document).ready(function () {
         $(".delete-tool").on("click", function () {
