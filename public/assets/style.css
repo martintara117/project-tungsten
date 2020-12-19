@@ -278,3 +278,17 @@ body {
 .editDiv {
   color: black;
 }
+
+.editHero3 {
+  background: black url(toolsRight.jpg) center / cover;
+}
+
+@media (max-width: 1024px) {
+  .hero2 {
+    max-width: 100%;
+    height: auto;
+  }
+}
+#new-tool {
+  color: black;
+}
