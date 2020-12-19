@@ -1,30 +1,31 @@
 {{> header}}
-<div class="columns">
-    <div class="column">
-        <div class="col-sm-6">
-            <form id="edit-profile" data-id="{{id}}">
+<section class="hero-is-full-height editHero2">
+    <div class="columns">
+        <div class="column">
+            <div class="editDiv">
+                <form id="edit-profile" data-id="{{id}}">
 
 
-                <div class="mb-3">
-                    <label for="firstName" class="form-label">First Name:</label>
-                    <input type="text" class="form-control" id="firstName" value="{{firstName}}">
-                </div>
-                <div class="mb-3">
-                    <label for="lastName" class="form-label">Last Name:</label>
-                    <input type="text" class="form-control" id="lastName" value="{{lastName}}">
-                </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email Address:</label>
-                    <input type="email" class="form-control" id="email" value="{{email}}">
-                </div>
-                <div class="mb-3">
-                    <label for="cityName" class="form-label">City Name:</label>
-                    <input type="text" class="form-control" id="cityName" value="{{cityName}}">
-                </div>
-                <button type="submit" class="btn btn-primary">Update</button>
-            </form>
+                    <div class="mb-3">
+                        <label for="firstName" class="form-label">First Name:</label>
+                        <input type="text" class="form-control" id="firstName" value="{{firstName}}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="lastName" class="form-label">Last Name:</label>
+                        <input type="text" class="form-control" id="lastName" value="{{lastName}}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Address:</label>
+                        <input type="email" class="form-control" id="email" value="{{email}}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="cityName" class="form-label">City Name:</label>
+                        <input type="text" class="form-control" id="cityName" value="{{cityName}}">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Update</button>
+                </form>
+            </div>
         </div>
     </div>
-</div>
-
+</section>
 <script type="text/javascript" src="/assets/js/updateProfile.js"></script>

@@ -30,6 +30,7 @@ app.use(
 );
 // Static directory to be served
 app.use(express.static("public"));
+app.use(express.static('./project-tungsten/public'))
 app.use(passport.initialize());
 app.use(passport.session());
 

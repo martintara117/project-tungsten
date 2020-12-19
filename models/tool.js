@@ -1,6 +1,7 @@
 module.exports = function (sequelize, DataTypes) {
   const Tool = sequelize.define(
     "Tool",
+    //info pulled from db
     {
       name: DataTypes.STRING,
       // category: DataTypes.STRING,
@@ -10,7 +11,7 @@ module.exports = function (sequelize, DataTypes) {
     },
     { timestamps: false }
   );
-
+//user tools pulled from db
   Tool.associate = function (models) {
     Tool.belongsToMany(models.Profile, {
       through: "UserTools",
