@@ -32,6 +32,7 @@ Tungsten Tools is designed to provide users with the opportunity to exchange han
 
 ## Usage
 
+Please follow the link to see a video demonstrating how the app preforms:
 
 ## License
 
@@ -43,7 +44,7 @@ Credit goes to Jenna LaFrancois, Drew Amerson, Kevin McAteer and Tara Martin.
 
 ## Test
 
-To test the app, please visit
+To test the app, please visit: https://floating-crag-67869.herokuapp.com/
 
 ## Contact
 
