@@ -32,7 +32,7 @@ Tungsten Tools is designed to provide users with the opportunity to exchange han
 
 ## Usage
 
-Please follow the link to see a video demonstrating how the app preforms:
+Please follow the link to see a video demonstrating how the app preforms: https://youtu.be/_J5csGEjbm4
 
 ## License
 
